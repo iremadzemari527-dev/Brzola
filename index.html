@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescue the Princess: RPG Battle Royale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas ანიმაციური ფონისთვის (ვარსკვლავები, ცეცხლი) -->
+    <canvas id="bgCanvas"></canvas>
+
+    <div id="game-ui">
+        <!-- მოთამაშის სტატუსი -->
+        <div class="top-bar">
+            <div class="player-info">
+                <h2 id="char-name">გმირი</h2>
+                <div class="stats">
+                    HP: <span id="hp">100</span> | MP: <span id="mp">50</span> | 
+                    LVL: <span id="lvl">1</span> | Gold: <span id="gold">0</span>
+                </div>
+            </div>
+            <div class="mission-status">
+                🎯 მიზანი: გადაარჩინე გოგონა!
+                <div class="progress-container">
+                    <div id="mission-bar" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- მთავარი სათამაშო არეალი -->
+        <div id="screen-display">
+            <!-- აქ ჩაიტვირთება სხვადასხვა სცენები JS-ით -->
+        </div>
+
+        <!-- მართვის პანელი -->
+        <div class="controls">
+            <div id="action-buttons">
+                <!-- ღილაკები დინამიურად შეიცვლება -->
+            </div>
+        </div>
+    </div>
+
+    <!-- აუდიო ეფექტები (სურვილისამებრ) -->
+    <audio id="click-sound" src="https://www.soundjay.com/buttons/button-16.mp3"></audio>
+
+    <script src="visuals.js"></script>
+    <script src="logic.js"></script>
+</body>
+</html>
