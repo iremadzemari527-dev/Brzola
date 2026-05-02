@@ -1,0 +1,70 @@
+:root {
+    --primary: #e94560;
+    --secondary: #1a1a2e;
+    --accent: #0f3460;
+    --gold: #f1c40f;
+}
+
+body {
+    margin: 0; padding: 0; background: #000;
+    color: white; font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+#bgCanvas {
+    position: fixed; top: 0; left: 0; z-index: -1;
+}
+
+#game-ui {
+    display: flex; flex-direction: column;
+    height: 100vh; background: rgba(0, 0, 0, 0.6);
+}
+
+.top-bar {
+    padding: 20px; background: rgba(26, 26, 46, 0.9);
+    border-bottom: 2px solid var(--primary);
+    display: flex; justify-content: space-between;
+}
+
+.progress-container {
+    width: 200px; height: 10px; background: #333;
+    border-radius: 5px; margin-top: 5px;
+}
+
+#mission-bar {
+    height: 100%; background: var(--primary);
+    transition: width 0.5s;
+}
+
+#screen-display {
+    flex-grow: 1; display: flex; align-items: center;
+    justify-content: center; text-align: center;
+    padding: 20px; font-size: 1.2rem;
+}
+
+.controls {
+    height: 150px; background: rgba(26, 26, 46, 0.9);
+    border-top: 2px solid var(--primary);
+    padding: 20px; display: flex; justify-content: center;
+}
+
+button {
+    background: var(--primary); border: none; color: white;
+    padding: 15px 30px; margin: 10px; border-radius: 8px;
+    cursor: pointer; font-weight: bold; font-size: 1rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    background: #ff4d6d; transform: scale(1.05);
+}
+
+.battle-scene {
+    animation: shake 0.5s infinite; /* PUBG ინტენსიური ბრძოლის ეფექტი */
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
